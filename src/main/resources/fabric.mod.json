@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "simplestats",
+  "version": "1.0.0",
+  "name": "Simple Stats",
+  "description": "A new and simple HUD to display important stats.",
+  "authors": ["rodrigograc4"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/simplestats/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.rodrigograc4.simplestats.SimpleStats"],
+    "modmenu": ["com.rodrigograc4.simplestats.util.ModMenuIntegration"]
+  },
+  "mixins": ["simplestats.mixin.json"],
+  "depends": {
+    "fabricloader": ">=0.18.2",
+    "minecraft": "~1.21.10",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
