@@ -41,7 +41,7 @@ public class WindRoseConfig implements ConfigData {
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.ColorPicker
-    public int labelColor = 0xFF9D05; 
+    public int labelColor = 0xBA2326;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.ColorPicker
