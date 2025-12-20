@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.rodrigograc4.simplestats.mixin",
+  "package": "com.rodrigograc4.windrose.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": ["TotemUseMixin"],
   "injectors": {

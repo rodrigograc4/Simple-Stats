@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "simplestats",
+  "id": "windrose",
   "version": "1.0.0",
-  "name": "Simple Stats",
+  "name": "WindRose",
   "description": "A new and simple HUD to display important stats.",
   "authors": ["rodrigograc4"],
   "contact": {},
   "license": "MIT",
-  "icon": "assets/simplestats/icon.png",
+  "icon": "assets/windrose/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": ["com.rodrigograc4.simplestats.SimpleStats"],
-    "modmenu": ["com.rodrigograc4.simplestats.util.ModMenuIntegration"]
+    "client": ["com.rodrigograc4.windrose.WindRose"],
+    "modmenu": ["com.rodrigograc4.windrose.util.ModMenuIntegration"]
   },
-  "mixins": ["simplestats.mixin.json"],
+  "mixins": ["windrose.mixin.json"],
   "depends": {
     "fabricloader": ">=0.18.2",
     "minecraft": "~1.21.10",

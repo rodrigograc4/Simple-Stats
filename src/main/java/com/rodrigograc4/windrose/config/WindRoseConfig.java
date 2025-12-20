@@ -1,4 +1,4 @@
-package com.rodrigograc4.simplestats.config;
+package com.rodrigograc4.windrose.config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,11 +9,11 @@ import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 
-@Config(name = "simplestats")
-public class SimpleStatsConfig implements ConfigData {
+@Config(name = "windrose")
+public class WindRoseConfig implements ConfigData {
 
     @ConfigEntry.Gui.Excluded
-    public static SimpleStatsConfig INSTANCE;
+    public static WindRoseConfig INSTANCE;
 
     @ConfigEntry.Gui.Tooltip
     public boolean statsEnabled = true;
@@ -88,7 +88,7 @@ public class SimpleStatsConfig implements ConfigData {
     }
 
     @ConfigEntry.Gui.Tooltip
-    public String directionLabel = "⬆ ";
+    public String directionLabel = "↑ ";
 
     // ===== TOTEMS =====
 
@@ -111,11 +111,11 @@ public class SimpleStatsConfig implements ConfigData {
     }
     
     public static void save() {
-        AutoConfig.getConfigHolder(SimpleStatsConfig.class).save();
+        AutoConfig.getConfigHolder(WindRoseConfig.class).save();
     }
 
     public static void init() {
-        AutoConfig.register(SimpleStatsConfig.class, JanksonConfigSerializer::new);
-        INSTANCE = AutoConfig.getConfigHolder(SimpleStatsConfig.class).getConfig();
+        AutoConfig.register(WindRoseConfig.class, JanksonConfigSerializer::new);
+        INSTANCE = AutoConfig.getConfigHolder(WindRoseConfig.class).getConfig();
     }
 }

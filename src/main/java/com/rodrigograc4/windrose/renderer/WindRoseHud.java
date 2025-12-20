@@ -1,6 +1,6 @@
-package com.rodrigograc4.simplestats.renderer;
+package com.rodrigograc4.windrose.renderer;
 
-import com.rodrigograc4.simplestats.config.SimpleStatsConfig;
+import com.rodrigograc4.windrose.config.WindRoseConfig;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
@@ -8,7 +8,7 @@ import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.util.math.BlockPos;
 
-public class SimpleStatsHud implements HudRenderCallback {
+public class WindRoseHud implements HudRenderCallback {
 
     /* ===================== UTIL ===================== */
 
@@ -57,12 +57,12 @@ public class SimpleStatsHud implements HudRenderCallback {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client == null || client.player == null || client.world == null) return;
 
-        SimpleStatsConfig config = SimpleStatsConfig.INSTANCE;
+        WindRoseConfig config = WindRoseConfig.INSTANCE;
         if (config == null || !config.statsEnabled) return;
 
         TextRenderer tr = client.textRenderer;
 
-        if (config.hudPosition == SimpleStatsConfig.HudPosition.HOTBAR_TOP) {
+        if (config.hudPosition == WindRoseConfig.HudPosition.HOTBAR_TOP) {
             renderHotbarHud(ctx, client, tr, config);
         } else {
             renderTopLeftHud(ctx, client, tr, config);
@@ -72,7 +72,7 @@ public class SimpleStatsHud implements HudRenderCallback {
 
     /* ===================== HELPERS ===================== */
 
-    private boolean hasMoreHotbarStats(SimpleStatsConfig c, String current) {
+    private boolean hasMoreHotbarStats(WindRoseConfig c, String current) {
         return switch (current) {
             case "COORDS" -> c.showDirection || c.showDayCount || c.showTotemsPopped;
             case "DIRECTION" -> c.showDayCount || c.showTotemsPopped;
@@ -96,7 +96,7 @@ public class SimpleStatsHud implements HudRenderCallback {
 
     /* ===================== TOP LEFT HUD ===================== */
 
-    private void renderTopLeftHud(DrawContext ctx, MinecraftClient client, TextRenderer tr, SimpleStatsConfig c) {
+    private void renderTopLeftHud(DrawContext ctx, MinecraftClient client, TextRenderer tr, WindRoseConfig c) {
         int x = (int) c.padding;
         int y = (int) c.padding;
         int spacing = tr.fontHeight + (int) c.linepadding;
@@ -110,7 +110,7 @@ public class SimpleStatsHud implements HudRenderCallback {
             int hours = (int) ((dayTime / 1000 + 6) % 24);
             int minutes = (int) ((dayTime % 1000) * 60 / 1000);
 
-            String symbol = (dayTime < 12000) ? "☀" : "🌙";
+            String symbol = (dayTime < 12000) ? " ☀" : " 🌙";
             String timeValue = String.format("%02d:%02d", hours, minutes);
 
             int dx = x;
@@ -175,13 +175,13 @@ public class SimpleStatsHud implements HudRenderCallback {
 
    /* ===================== HOTBAR HUD ===================== */
 
-    private int getHotbarHudWidth(TextRenderer tr, MinecraftClient client, SimpleStatsConfig c) {
+    private int getHotbarHudWidth(TextRenderer tr, MinecraftClient client, WindRoseConfig c) {
         String sep = "  |  ";
         int width = 0;
 
         if (c.showCoords) {
             BlockPos p = client.player.getBlockPos();
-            String value = p.getX() + " " + p.getY() + " " + p.getZ();
+            String value = p.getX() + ", " + p.getY() + ", " + p.getZ();
             width += tr.getWidth(c.coordsString) + tr.getWidth(value) + tr.getWidth(sep);
         }
 
@@ -202,7 +202,7 @@ public class SimpleStatsHud implements HudRenderCallback {
             width += tr.getWidth(String.valueOf(days));
 
             if (c.showHours) {
-                width += tr.getWidth(" ☀ ");
+                width += tr.getWidth("  ☀ ");
                 width += tr.getWidth("00:00");
             }
 
@@ -224,7 +224,7 @@ public class SimpleStatsHud implements HudRenderCallback {
     }
 
 
-    private void renderHotbarHud(DrawContext ctx, MinecraftClient client, TextRenderer tr, SimpleStatsConfig c) {
+    private void renderHotbarHud(DrawContext ctx, MinecraftClient client, TextRenderer tr, WindRoseConfig c) {
         int sw = client.getWindow().getScaledWidth();
         int sh = client.getWindow().getScaledHeight();
         int y = sh - 49 - tr.fontHeight - 4;
@@ -280,7 +280,7 @@ public class SimpleStatsHud implements HudRenderCallback {
             int hours = (int) ((dayTime / 1000 + 6) % 24);
             int minutes = (int) ((dayTime % 1000) * 60 / 1000);
 
-            String symbol = (dayTime < 12000) ? "☀" : "🌙";
+            String symbol = (dayTime < 12000) ? " ☀" : " 🌙";
             String timeValue = String.format("%02d:%02d", hours, minutes);
 
             ctx.drawTextWithShadow(tr, c.dayCountString, drawX, y, opaque(c.labelColor));
@@ -304,7 +304,6 @@ public class SimpleStatsHud implements HudRenderCallback {
             }
         }
 
-        /* ========= TOTEMS ========= */
         /* ========= TOTEMS ========= */
         if (c.showTotemsPopped) {
             String worldKey = getWorldKey(client);

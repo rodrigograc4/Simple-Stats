@@ -1,6 +1,6 @@
-package com.rodrigograc4.simplestats.mixin;
+package com.rodrigograc4.windrose.mixin;
 
-import com.rodrigograc4.simplestats.config.SimpleStatsConfig;
+import com.rodrigograc4.windrose.config.WindRoseConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.network.packet.s2c.play.EntityStatusS2CPacket;
@@ -33,10 +33,10 @@ public class TotemUseMixin {
                     : "UnknownWorld";
         }
 
-        SimpleStatsConfig.INSTANCE.incrementTotems(worldKey);
+        WindRoseConfig.INSTANCE.incrementTotems(worldKey);
 
         System.out.println("!!! TOTEM CONTADO COM SUCESSO PARA WORLD/SERVER: " 
                 + worldKey 
-                + " | Total: " + SimpleStatsConfig.INSTANCE.getTotemsForWorld(worldKey));
+                + " | Total: " + WindRoseConfig.INSTANCE.getTotemsForWorld(worldKey));
     }
 }

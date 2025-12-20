@@ -1,6 +1,6 @@
-package com.rodrigograc4.simplestats.util;
+package com.rodrigograc4.windrose.util;
 
-import com.rodrigograc4.simplestats.config.SimpleStatsConfig;
+import com.rodrigograc4.windrose.config.WindRoseConfig;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -11,6 +11,6 @@ import net.fabricmc.api.Environment;
 public class ModMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(SimpleStatsConfig.class, parent).get();
+        return parent -> AutoConfig.getConfigScreen(WindRoseConfig.class, parent).get();
     }
 }

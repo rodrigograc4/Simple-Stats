@@ -1,57 +1,57 @@
 {
-  "text.autoconfig.simplestats.title": "Simple Stats Config",
+  "text.autoconfig.windrose.title": "WindRose Config",
 
-  "text.autoconfig.simplestats.option.statsEnabled": "Enable Mod",
-  "text.autoconfig.simplestats.option.statsEnabled.@Tooltip": "Toggles the entire HUD display on or off.",
+  "text.autoconfig.windrose.option.statsEnabled": "Enable Mod",
+  "text.autoconfig.windrose.option.statsEnabled.@Tooltip": "Toggles the entire HUD display on or off.",
 
-  "text.autoconfig.simplestats.option.padding": "Screen Padding",
-  "text.autoconfig.simplestats.option.padding.@Tooltip": "Sets the distance between the stats and the edge of the screen. || default: 3",
+  "text.autoconfig.windrose.option.padding": "Screen Padding",
+  "text.autoconfig.windrose.option.padding.@Tooltip": "Sets the distance between the stats and the edge of the screen. || default: 3",
 
-  "text.autoconfig.simplestats.option.linepadding": "Line Spacing",
-  "text.autoconfig.simplestats.option.linepadding.@Tooltip": "Sets the vertical distance between each line of text. || default: 3",
+  "text.autoconfig.windrose.option.linepadding": "Line Spacing",
+  "text.autoconfig.windrose.option.linepadding.@Tooltip": "Sets the vertical distance between each line of text. || default: 3",
 
-  "text.autoconfig.simplestats.option.labelColor": "Label Color",
-  "text.autoconfig.simplestats.option.labelColor.@Tooltip": "Color used for labels (text before the value). || default: FF9D05",
+  "text.autoconfig.windrose.option.labelColor": "Label Color",
+  "text.autoconfig.windrose.option.labelColor.@Tooltip": "Color used for labels (text before the value). || default: FF9D05",
 
-  "text.autoconfig.simplestats.option.valueColor": "Value Color",
-  "text.autoconfig.simplestats.option.valueColor.@Tooltip": "Color used for values (numbers or text after the label). || default: FFFFFF",
+  "text.autoconfig.windrose.option.valueColor": "Value Color",
+  "text.autoconfig.windrose.option.valueColor.@Tooltip": "Color used for values (numbers or text after the label). || default: FFFFFF",
 
-  "text.autoconfig.simplestats.option.showDayCount": "Show Day Count",
-  "text.autoconfig.simplestats.option.showDayCount.@Tooltip": "Enable or disable the world age display.",
+  "text.autoconfig.windrose.option.showDayCount": "Show Day Count",
+  "text.autoconfig.windrose.option.showDayCount.@Tooltip": "Enable or disable the world age display.",
 
-  "text.autoconfig.simplestats.option.dayCountOffset": "Day Count Offset",
-  "text.autoconfig.simplestats.option.dayCountOffset.@Tooltip": "Minecraft internally starts counting days at 0. This value is added to the total to show 'Day 1' on your first day. || default: 1",
+  "text.autoconfig.windrose.option.dayCountOffset": "Day Count Offset",
+  "text.autoconfig.windrose.option.dayCountOffset.@Tooltip": "Minecraft internally starts counting days at 0. This value is added to the total to show 'Day 1' on your first day. || default: 1",
 
-  "text.autoconfig.simplestats.option.dayCountString": "Day Count Label",
-  "text.autoconfig.simplestats.option.dayCountString.@Tooltip": "Custom text to display before the day number.",
+  "text.autoconfig.windrose.option.dayCountString": "Day Count Label",
+  "text.autoconfig.windrose.option.dayCountString.@Tooltip": "Custom text to display before the day number.",
 
-  "text.autoconfig.simplestats.option.showHours": "Show In-Game Time",
-  "text.autoconfig.simplestats.option.showHours.@Tooltip": "Enable or disable the in-game time display.",
+  "text.autoconfig.windrose.option.showHours": "Show In-Game Time",
+  "text.autoconfig.windrose.option.showHours.@Tooltip": "Enable or disable the in-game time display.",
 
-  "text.autoconfig.simplestats.option.showCoords": "Show Coordinates",
-  "text.autoconfig.simplestats.option.showCoords.@Tooltip": "Enable or disable the XYZ position display.",
+  "text.autoconfig.windrose.option.showCoords": "Show Coordinates",
+  "text.autoconfig.windrose.option.showCoords.@Tooltip": "Enable or disable the XYZ position display.",
 
-  "text.autoconfig.simplestats.option.coordsUseBrackets": "Bracket Coordinates",
-  "text.autoconfig.simplestats.option.coordsUseBrackets.@Tooltip": "Wrap the coordinates value in brackets. Example: [123, 64, -456]",
+  "text.autoconfig.windrose.option.coordsUseBrackets": "Bracket Coordinates",
+  "text.autoconfig.windrose.option.coordsUseBrackets.@Tooltip": "Wrap the coordinates value in brackets. Example: [123, 64, -456]",
 
-  "text.autoconfig.simplestats.option.coordsString": "Coordinates Label",
-  "text.autoconfig.simplestats.option.coordsString.@Tooltip": "Custom text to display before the XYZ coordinates.",
+  "text.autoconfig.windrose.option.coordsString": "Coordinates Label",
+  "text.autoconfig.windrose.option.coordsString.@Tooltip": "Custom text to display before the XYZ coordinates.",
 
-  "text.autoconfig.simplestats.option.showDirection": "Show Direction",
-  "text.autoconfig.simplestats.option.showDirection.@Tooltip": "Enable or disable the direction the player is facing.",
+  "text.autoconfig.windrose.option.showDirection": "Show Direction",
+  "text.autoconfig.windrose.option.showDirection.@Tooltip": "Enable or disable the direction the player is facing.",
 
-  "text.autoconfig.simplestats.option.directionMode": "Direction Mode",
-  "text.autoconfig.simplestats.option.directionMode.@Tooltip": "Choose how the facing direction is displayed.",
+  "text.autoconfig.windrose.option.directionMode": "Direction Mode",
+  "text.autoconfig.windrose.option.directionMode.@Tooltip": "Choose how the facing direction is displayed.",
 
-  "text.autoconfig.simplestats.option.directionMode.CARDINAL": "Cardinal (North / South / East / West)",
-  "text.autoconfig.simplestats.option.directionMode.AXIS": "Axis (+X / -X / +Z / -Z)",
+  "text.autoconfig.windrose.option.directionMode.CARDINAL": "Cardinal (North / South / East / West)",
+  "text.autoconfig.windrose.option.directionMode.AXIS": "Axis (+X / -X / +Z / -Z)",
 
-  "text.autoconfig.simplestats.option.directionLabel": "Direction Label",
-  "text.autoconfig.simplestats.option.directionLabel.@Tooltip": "Text shown before the direction value. Default is an arrow.",
+  "text.autoconfig.windrose.option.directionLabel": "Direction Label",
+  "text.autoconfig.windrose.option.directionLabel.@Tooltip": "Text shown before the direction value. Default is an arrow.",
 
-  "text.autoconfig.simplestats.option.showTotemsPopped": "Show Totems Popped",
-  "text.autoconfig.simplestats.option.showTotemsPopped.@Tooltip": "Enable or disable the counter for totems used in this world.",
+  "text.autoconfig.windrose.option.showTotemsPopped": "Show Totems Popped",
+  "text.autoconfig.windrose.option.showTotemsPopped.@Tooltip": "Enable or disable the counter for totems used in this world.",
 
-  "text.autoconfig.simplestats.option.totemsPoppedString": "Totems Popped Label",
-  "text.autoconfig.simplestats.option.totemsPoppedString.@Tooltip": "Custom text to display before the totem count."
+  "text.autoconfig.windrose.option.totemsPoppedString": "Totems Popped Label",
+  "text.autoconfig.windrose.option.totemsPoppedString.@Tooltip": "Custom text to display before the totem count."
 }
